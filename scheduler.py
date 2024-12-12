@@ -113,6 +113,11 @@ class Schedule(dict):
     #     # or not. If yes then import it and return else
     #     # self = dict(stream_dict.starts + stream_dict.title)
     #     self = dict()
+    def __init__(self):
+        # for saving variable name as an attribute to stream object. Needed for json dump
+        # self.name = uuid.uuid4()
+        # self.name = 'week' + str(dt.datetime.today().isocalendar()[1])
+        self.name = str(dt.datetime.today().isocalendar()[0]) + '_' + str(dt.datetime.today().isocalendar()[1])
 
     def add_stream(self : dict, stream : Stream) -> Dict:
         '''
@@ -129,13 +134,32 @@ class Schedule(dict):
         # For now it will just look for a json file with the week number and import it
         return NotImplemented
     
-    def import_json(filename : str) -> Dict:
+    # def import_json(filename : str) -> Dict:
+    #     # get the current week from datetime
+    #     # look for a jsonc file with the same week name
+    #     # read the contents, convert them into appropriate format and return schedule
+    #     with open('json/'+ filename + '.json', 'r', encoding='utf-8') as file_handle:
+    #         json_sched = json.load(file_handle)
+    #     for key, value in json_sched.items():
+    #         json_sched[key] = Stream().from_dict(value)
+    #     print('JSON imported...')
+    #     return json_sched
+
+    def import_json(self, jsonPath : str) -> Dict:
+        
         # get the current week from datetime
         # look for a jsonc file with the same week name
         # read the contents, convert them into appropriate format and return schedule
-        return NotImplemented
+        with open(jsonPath + self.name + '.json', 'r', encoding='utf-8') as file_handle:
+            self = json.load(file_handle)
+        for key, value in self.items():
+            self[key] = Stream().from_dict(value)
+        print('JSON imported...')
+        return self
     
     def export_json(self) -> None:
         # export the schedule as json with filename as current-week_variable-name.jsonc
-        return NotImplemented
+        with open('json/' + str(self.name) + '.json', 'w', encoding='utf-8') as file_handle:
+            json.dump(self, file_handle, indent= 4)
+        print(f'JSON exported...{self.name}.json')
     

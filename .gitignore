@@ -170,6 +170,8 @@ cython_debug/
 #.idea/
 
 # VS Code
+# Only add these files to version control if other members in the team are planning to resume
+# from exactly where you left off
 .vscode
 *.code-workspace
 

@@ -16,7 +16,7 @@ profile_path = os.environ.get('LOCALAPPDATA') + r'\Google\Chrome\AutomationGV'
 profile_name = 'Default' #not implemented
 app = 'Chrome'
 
-print("Variables defined")
+# print("Variables defined")
 
 def init_browser(browser: str, path: str, profile: str ='Default'):
     '''
