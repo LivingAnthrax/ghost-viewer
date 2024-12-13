@@ -105,6 +105,7 @@ def main() -> None:
     # ### Archaic code ends here
     # Get current week number and set it as an empty schdule variable
     now = dt.datetime.now()
+    refresh_wait_time = 300
     weekNow = Schedule()
     
     # Get json files in the respective directory
@@ -124,23 +125,25 @@ def main() -> None:
 
     for index, stream in weekNow.items():
         # print(f'i in for loop : {i}')'
+        now = dt.datetime.now()
         print(f"{now.strftime('%Y-%m-%d %H:%M :: ')}Upcoming stream - {stream.title} @ {stream.starts.strftime('%Y-%m-%d %H:%M')} drops {stream.drops}")
+        if now >= stream.ends:
+                print(f"{now.strftime('%Y-%m-%d %H:%M :: ')}{stream.title} is over @ {stream.ends.strftime('%Y-%m-%d %H:%M')}")
+                continue
         while True:
             now = dt.datetime.now()
-            if now >= stream.ends:
-                print(f"{now.strftime('%Y-%m-%d %H:%M :: ')}{stream.title} is over @ {stream.ends.strftime('%Y-%m-%d %H:%M')}")
-                break
-            elif stream.starts > now >stream.ends:
+            if now < stream.starts:
+                print(f"{now.strftime('%Y-%m-%d %H:%M :: ')}{stream.title} is yet to start. {(stream.starts - now).seconds//60} min(s) left")
+                sleep(refresh_wait_time)
+                continue
+            # if stream.starts > now >stream.ends:
+            else:
                 print(f"{now.strftime('%Y-%m-%d %H:%M :: ')}Starting {stream.title} and waiting till {stream.ends.strftime('%Y-%m-%d %H:%M')}")
                 stream.play_stream()
                 print(f"{now.strftime('%Y-%m-%d %H:%M :: ')}{stream.title} has ended")
                 break
-            else:
-                print(f"{now.strftime('%Y-%m-%d %H:%M :: ')}{stream.title} is yet to start. {(stream.starts - now).seconds//60} min(s) left")
-                sleep(300)
-                continue
-        print(f'All caught up! No more streams this week..')
-    print('End of main')
+
+    print(f'All caught up! No more streams this week..')
 
 if __name__ == '__main__':
     main()

@@ -50,8 +50,9 @@ class Stream:
         # TODO : make this function asynchronous
         browser = init_browser(self.browser, profile_path, profile_name)
         browser.get(url = self.url)
-        print(f'Starting {self.title} @ {self.starts} for {self.duration} mins')
-        sleep(self.duration*60)
+        timeLeft = (self.ends - dt.datetime.now()).seconds
+        print(f'Starting {self.title} @ {self.starts} for {timeLeft//60} mins')
+        sleep(timeLeft)
         print(f'Closing {self.title} @ {self.ends}')
         browser.close()
     
