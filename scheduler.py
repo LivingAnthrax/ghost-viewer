@@ -94,6 +94,7 @@ class Stream:
         self.title = stream_info['title']
         self.drops = stream_info['drops']
         self.browser = stream_info['browser']
+        self.index = self.starts.strftime('%Y-%m-%d %H:%M_') + self.title
         return self
 
 class Schedule(dict):
