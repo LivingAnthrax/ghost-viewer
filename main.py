@@ -31,7 +31,11 @@ def sanity_check() -> None:
     # 4. Check for open browser windows
     # #### Schedule checks
     # 1. Check if there are any schedule overlaps and handle them
-    # 2. Clean the schedule and remove old streams#
+    # 2. Clean the schedule and remove old streams
+    # 3. After reading the json, sort the streams chronologically
+    # 4. For every stream, make sure 
+    #   a) stream.ends > stream.starts
+    #   b) stream.starts + duration = stream.ends#
     return NotImplemented
 
 def main() -> None:
@@ -117,7 +121,7 @@ def main() -> None:
         # print(weekNow.name)
         weekNow = weekNow.import_json(jsonPath)
     else:
-        pprint('json NOT found for weekNow')
+        pprint(f'json NOT found for {weekNow.name}')
         # weekNow.update()
         # weekNow = weekNow.import_json(weekNow.name)
     
