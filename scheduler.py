@@ -119,8 +119,8 @@ class Schedule(dict):
         # for saving variable name as an attribute to stream object. Needed for json dump
         # self.name = uuid.uuid4()
         # self.name = 'week' + str(dt.datetime.today().isocalendar()[1])
-        self.name = str(dt.datetime.today().isocalendar()[0]) + '_' + str(dt.datetime.today().isocalendar()[1])
-
+        # self.name = str(dt.datetime.today().isocalendar()[0]) + '_' + str(dt.datetime.today().isocalendar()[1])
+        self.name = str(dt.datetime.today().strftime('%Y')) + '_' + str(dt.datetime.today().strftime('%V'))
     def add_stream(self : dict, stream : Stream) -> Dict:
         '''
         Utility to manually add stream object into the schedule 
