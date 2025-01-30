@@ -98,6 +98,31 @@ class Stream:
         self.index = self.starts.strftime('%Y-%m-%d %H:%M_') + self.title
         return self
 
+    def time_left(self, max_depth: int = 2) -> str:
+        """
+        Get time left for the stream to start.\n
+        `max_depth` controls the resolution of time units to display.
+        """
+        diff = self.starts - dt.datetime.now()
+        diff_dict = {
+            'd': diff.days,
+            'h': diff.seconds//3600,
+            'm': (diff.seconds%3600)//60,
+            's': diff.seconds%60
+        }
+
+        message = str()
+        depth = 0
+        for key,val in diff_dict.items():
+            if val == 0 or depth >= max_depth :
+                continue
+            else:
+                message += (f"{val.__str__()} {key} ")
+                depth += 1
+
+        return message
+
+
 class Schedule(dict):
     '''
     A collection of Streams for each week stored in a dictionary format for easy recall.\n
@@ -121,6 +146,7 @@ class Schedule(dict):
         # self.name = 'week' + str(dt.datetime.today().isocalendar()[1])
         # self.name = str(dt.datetime.today().isocalendar()[0]) + '_' + str(dt.datetime.today().isocalendar()[1])
         self.name = str(dt.datetime.today().strftime('%Y')) + '_' + str(dt.datetime.today().strftime('%V'))
+    
     def add_stream(self : dict, stream : Stream) -> Dict:
         '''
         Utility to manually add stream object into the schedule 
@@ -156,7 +182,7 @@ class Schedule(dict):
             self = json.load(file_handle)
         for key, value in self.items():
             self[key] = Stream().from_dict(value)
-        print('JSON imported...')
+        print('json imported...')
         return self
     
     def export_json(self) -> None:
@@ -165,3 +191,14 @@ class Schedule(dict):
             json.dump(self, file_handle, indent= 4)
         print(f'JSON exported...{self.name}.json')
     
+    def __repr__(self) -> str :
+        """
+        Prints a summary of all the streams in the current week on startup
+        """
+        # Uses:
+        # 1. Get the number of streams for this week
+        # 2. Print the summary in the following format
+        #   Total streams this week : X
+        #   Stream 1 : 'Stream.title' @ DD MMM, YYYY for XX mins drops {Stream.drops}
+        #   Stream 1 : 'Stream.title' @ DD MMM, YYYY for XX mins drops {Stream.drops} #
+        return NotImplemented

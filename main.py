@@ -107,27 +107,32 @@ def main() -> None:
     #         sleep(300)
     #         continue
     # ### Archaic code ends here
+
+    # User settings : Define constants and other env variables
+    MAX_DEPTH : int = 2             # Units to show for time_left
+    JSON_PATH = './json/'           # Location for weekly schedule files
+    REFRESH_WAIT_TIME : int = 300   # Sleep duration before checking stream status (in seconds) 
+
     # Get current week number and set it as an empty schdule variable
     now = dt.datetime.now()
-    refresh_wait_time = 300
     weekNow = Schedule()
     
     # Get json files in the respective directory
-    jsonPath = './json/'
-    jsonFiles = [file.name for file in scandir(jsonPath)]
+    
+    jsonFiles = [file.name for file in scandir(JSON_PATH)]
 
     if weekNow.name + '.json' in jsonFiles:
-        print(f'json found for {weekNow.name}')
+        print(f'json found for {weekNow.name}...')
         # print(weekNow.name)
-        weekNow = weekNow.import_json(jsonPath)
+        weekNow = weekNow.import_json(JSON_PATH)
     else:
-        pprint(f'json NOT found for {weekNow.name}')
+        print(f'json NOT found for {weekNow.name} in {JSON_PATH}')
         # weekNow.update()
         # weekNow = weekNow.import_json(weekNow.name)
     
     # pprint(weekNow)
 
-    for index, stream in weekNow.items():
+    for _, stream in weekNow.items():
         # print(f'i in for loop : {i}')'
         now = dt.datetime.now()
         print(f"{now.strftime('%Y-%m-%d %H:%M :: ')}Upcoming stream - {stream.title} @ {stream.starts.strftime('%Y-%m-%d %H:%M')} drops {stream.drops}")
@@ -137,8 +142,8 @@ def main() -> None:
         while True:
             now = dt.datetime.now()
             if now < stream.starts:
-                print(f"{now.strftime('%Y-%m-%d %H:%M :: ')}{stream.title} is yet to start. {(stream.starts - now).seconds//60} min(s) left")
-                sleep(refresh_wait_time)
+                print(f"{now.strftime('%Y-%m-%d %H:%M :: ')}{stream.title} is yet to start. {stream.time_left(MAX_DEPTH)}left.")
+                sleep(REFRESH_WAIT_TIME)
                 continue
             # if stream.starts > now >stream.ends:
             else:
