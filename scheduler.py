@@ -191,14 +191,14 @@ class Schedule(dict):
             json.dump(self, file_handle, indent= 4)
         print(f'JSON exported...{self.name}.json')
     
-    def __repr__(self) -> str :
-        """
-        Prints a summary of all the streams in the current week on startup
-        """
-        # Uses:
-        # 1. Get the number of streams for this week
-        # 2. Print the summary in the following format
-        #   Total streams this week : X
-        #   Stream 1 : 'Stream.title' @ DD MMM, YYYY for XX mins drops {Stream.drops}
-        #   Stream 1 : 'Stream.title' @ DD MMM, YYYY for XX mins drops {Stream.drops} #
-        return NotImplemented
+    # def __repr__(self) -> str :
+    #     """
+    #     Prints a summary of all the streams in the current week on startup
+    #     """
+    #     # Uses:
+    #     # 1. Get the number of streams for this week
+    #     # 2. Print the summary in the following format
+    #     #   Total streams this week : X
+    #     #   Stream 1 : 'Stream.title' @ DD MMM, YYYY for XX mins drops {Stream.drops}
+    #     #   Stream 2 : 'Stream.title' @ DD MMM, YYYY for XX mins drops {Stream.drops} #
+    #     return NotImplemented
