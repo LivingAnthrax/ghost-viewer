@@ -1,0 +1,56 @@
+{
+  "2025-02-20 01:30_Emission Tenno": {
+    "starts": "2025-02-20 01:30",
+    "ends": "2025-02-20 03:05",
+    "duration": 95,
+    "url": "https://www.twitch.tv/warframeinternational",
+    "title": "Emission Tenno",
+    "drops": "Built Forma",
+    "browser": "chrome"
+  },
+  "2025-02-20 03:10_Emission Tenno Raid": {
+    "starts": "2025-02-20 03:10",
+    "ends": "2025-02-20 03:55",
+    "duration": 45,
+    "url": "https://www.twitch.tv/Bluyayogamer",
+    "title": "Emission Tenno Raid",
+    "drops": "Ticker Floof",
+    "browser": "chrome"
+  },
+  "2025-02-21 04:30_Prime Time #425": {
+    "starts": "2025-02-21 04:30",
+    "ends": "2025-02-21 07:30",
+    "duration": 180,
+    "url": "https://www.twitch.tv/warframe",
+    "title": "Prime Time #425",
+    "drops": "Built Forma",
+    "browser": "chrome"
+  },
+  "2025-02-21 07:30_Prime Time Raid": {
+    "starts": "2025-02-21 07:30",
+    "ends": "2025-02-21 08:05",
+    "duration": 35,
+    "url": "https://twitch.tv/egirltenno",
+    "title": "Prime Time Raid",
+    "drops": "Ticker Floof",
+    "browser": "chrome"
+  },
+  "2025-02-22 06:30_Community Weekend Stream 1": {
+    "starts": "2025-02-22 06:30",
+    "ends": "2025-02-22 07:37",
+    "duration": 67,
+    "url": "http://twitch.tv/justhailey",
+    "title": "Commnity Weekend Stream 1",
+    "drops": "Domestik Drone",
+    "browser": "chrome"
+  },
+  "2025-02-23 06:30_Community Weekend Stream 2": {
+    "starts": "2025-02-23 08:30",
+    "ends": "2025-02-23 09:37",
+    "duration": 67,
+    "url": "http://twitch.tv/shinobi_fufu",
+    "title": "Commnity Weekend Stream 2",
+    "drops": "Prisma Excalibur Noggle",
+    "browser": "chrome"
+  }
+}
