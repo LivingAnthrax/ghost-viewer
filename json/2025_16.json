@@ -1,0 +1,66 @@
+{
+  "2025-04-17 00:30_Emision Tenno": {
+    "starts": "2025-04-17 00:30",
+    "ends": "2025-04-17 02:05",
+    "duration": 95,
+    "url": "https://www.twitch.tv/warframeinternational",
+    "title": "Emision Tenno",
+    "drops": "Relic Pack",
+    "browser": "chrome"
+  },
+  "2025-04-17 02:10_Emision Tenno Raid": {
+    "starts": "2025-04-17 02:10",
+    "ends": "2025-04-17 02:55",
+    "duration": 45,
+    "url": "https://www.twitch.tv/xxvampixx07",
+    "title": "Emision Tenno Raid",
+    "drops": "Sunrise Roller Floof",
+    "browser": "chrome"
+  },
+  "2025-04-18 03:30_Prime Time #433": {
+    "starts": "2025-04-18 03:30",
+    "ends": "2025-04-18 06:30",
+    "duration": 180,
+    "url": "https://www.twitch.tv/warframe",
+    "title": "Prime Time #433",
+    "drops": "Relic Pack",
+    "browser": "chrome"
+  },
+  "2025-04-18 06:30_Prime Time Raid": {
+    "starts": "2025-04-18 06:30",
+    "ends": "2025-04-18 07:05",
+    "duration": 35,
+    "url": "https://twitch.tv/Viceroycyndr",
+    "title": "Prime Time Raid",
+    "drops": "Sunrise Roller Floof",
+    "browser": "chrome"
+  },
+  "2025-04-19 21:30_Make-up Stream": {
+    "starts": "2025-04-19 21:30",
+    "ends": "2025-04-19 22:37",
+    "duration": 67,
+    "url": "http://twitch.tv/AdikDarkCero",
+    "title": "Make-up Stream",
+    "drops": "Domestik Carrion Drone",
+    "browser": "chrome"
+  },
+  "2025-04-19 23:30_Community Weekend Stream 1": {
+    "starts": "2025-04-19 23:30",
+    "ends": "2025-04-20 00:37",
+    "duration": 67,
+    "url": "http://twitch.tv/soymistergamer",
+    "title": "Community Weekend Stream 1",
+    "drops": "Fire-Veined Stover Floof",
+    "browser": "chrome"
+  },
+  "2025-04-21 02:30_Community Weekend Stream 2": {
+    "starts": "2025-04-21 02:30",
+    "ends": "2025-04-21 03:37",
+    "duration": 67,
+    "url": "http://twitch.tv/ArchAngel7774",
+    "title": "Community Weekend Stream 2",
+    "drops": "Ticker Floof",
+    "browser": "chrome"
+  }
+}
+    

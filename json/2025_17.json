@@ -1,0 +1,75 @@
+{
+  "2025-04-24 00:30_Emision Tenno": {
+    "starts": "2025-04-24 00:30",
+    "ends": "2025-04-24 02:05",
+    "duration": 95,
+    "url": "https://www.twitch.tv/warframeinternational",
+    "title": "Emision Tenno",
+    "drops": "5 Live Heartcells",
+    "browser": "chrome"
+  },
+  "2025-04-24 02:10_Emision Tenno Raid": {
+    "starts": "2025-04-24 02:10",
+    "ends": "2025-04-24 02:55",
+    "duration": 45,
+    "url": "https://www.twitch.tv/ozku",
+    "title": "Emision Tenno Raid",
+    "drops": "Lizzie Guitar Decoration",
+    "browser": "chrome"
+  },
+  "2025-04-25 03:30_Prime Time #434": {
+    "starts": "2025-04-25 03:30",
+    "ends": "2025-04-25 06:30",
+    "duration": 180,
+    "url": "https://www.twitch.tv/warframe",
+    "title": "Prime Time #434",
+    "drops": "5 Live Heartcells",
+    "browser": "chrome"
+  },
+  "2025-04-25 06:30_Prime Time Raid": {
+    "starts": "2025-04-25 06:30",
+    "ends": "2025-04-25 07:05",
+    "duration": 35,
+    "url": "https://twitch.tv/pnx_vector",
+    "title": "Prime Time Raid",
+    "drops": "Lizzie Guitar Decoration",
+    "browser": "chrome"
+  },
+  "2025-04-25 20:30_Soulframe Devstream #7": {
+    "starts": "2025-04-25 20:30",
+    "ends": "2025-04-25 21:30",
+    "duration": 60,
+    "url": "https://www.twitch.tv/playsoulframe",
+    "title": "Soulframe Devstream #7",
+    "drops": "Preludes Invite Code",
+    "browser": "chrome"
+  },
+  "2025-04-25 23:30_Devstream #187": {
+    "starts": "2025-04-25 23:30",
+    "ends": "2025-04-26 01:30",
+    "duration": 120,
+    "url": "https://www.twitch.tv/warframe",
+    "title": "Devstream #187",
+    "drops": "Cursed x Blessed Grab Bag",
+    "browser": "chrome"
+  },
+  "2025-04-26 06:30_Community Weekend Stream 1": {
+    "starts": "2025-04-26 06:30",
+    "ends": "2025-04-26 07:37",
+    "duration": 67,
+    "url": "http://twitch.tv/egirltenno",
+    "title": "Community Weekend Stream 1",
+    "drops": "Citrine Prex Card",
+    "browser": "chrome"
+  },
+  "2025-04-26 23:30_Community Weekend Stream 2": {
+    "starts": "2025-04-26 23:30",
+    "ends": "2025-04-27 00:37",
+    "duration": 67,
+    "url": "http://twitch.tv/VVhite_Angel",
+    "title": "Community Weekend Stream 2",
+    "drops": "Note Beacon",
+    "browser": "chrome"
+  }
+}
+    
